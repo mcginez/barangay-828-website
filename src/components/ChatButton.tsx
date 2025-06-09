@@ -37,13 +37,13 @@ const ChatButton = () => {
         setMessages(prev => [...prev, { text: data.message, isUser: false }]);
       } else {
         setMessages(prev => [...prev, { 
-          text: "I'm sorry, I encountered an error. Please try again later.", 
+          text: "Pasensya na po, may problema sa aming sistema. Pakisubukan po muli mamaya.", 
           isUser: false 
         }]);
       }
-    } catch (error) {
+    } catch {
       setMessages(prev => [...prev, { 
-        text: "I'm sorry, I encountered an error. Please try again later.", 
+        text: "Pasensya na po, may problema sa aming sistema. Pakisubukan po muli mamaya.", 
         isUser: false 
       }]);
     } finally {
