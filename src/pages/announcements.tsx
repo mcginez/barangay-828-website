@@ -32,7 +32,7 @@ export default function Announcements() {
     <Layout>
       <div className="bg-gray-50 min-h-screen">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h1 className="text-4xl font-bold text-center mb-12">Announcements</h1>
+          <h1 className="text-4xl font-bold text-center mb-12 text-gray-900">Announcements</h1>
 
           {/* Announcements List */}
           <div className="space-y-6">
@@ -40,14 +40,14 @@ export default function Announcements() {
               <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
                 <div className="flex justify-between items-start mb-4">
                   <div>
-                    <h2 className="text-2xl font-semibold mb-2">{announcement.title}</h2>
-                    <p className="text-gray-600">{announcement.description}</p>
+                    <h2 className="text-2xl font-semibold mb-2 text-gray-900">{announcement.title}</h2>
+                    <p className="text-gray-900">{announcement.description}</p>
                   </div>
                   <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
                     {announcement.category}
                   </span>
                 </div>
-                <div className="text-sm text-gray-500">
+                <div className="text-sm text-gray-900">
                   Posted on: {announcement.date}
                 </div>
               </div>
@@ -57,8 +57,8 @@ export default function Announcements() {
           {/* Subscribe Section */}
           <div className="mt-16 bg-blue-50 p-8 rounded-lg">
             <div className="max-w-2xl mx-auto text-center">
-              <h2 className="text-2xl font-bold mb-4">Stay Updated</h2>
-              <p className="text-gray-600 mb-6">
+              <h2 className="text-2xl font-bold mb-4 text-gray-900">Stay Updated</h2>
+              <p className="text-gray-900 mb-6">
                 Subscribe to our newsletter to receive the latest announcements and updates.
               </p>
               <form className="flex flex-col sm:flex-row gap-4 justify-center">

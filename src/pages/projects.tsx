@@ -58,7 +58,7 @@ export default function Projects() {
     <Layout>
       <div className="bg-gray-50 min-h-screen">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h1 className="text-4xl font-bold text-center mb-12">SK Projects & Initiatives</h1>
+          <h1 className="text-4xl font-bold text-center mb-12 text-gray-900">SK Projects & Initiatives</h1>
 
           {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -83,12 +83,12 @@ export default function Projects() {
                       {project.status}
                     </span>
                   </div>
-                  <p className="text-gray-600 mb-4">{project.description}</p>
+                  <p className="text-gray-900 mb-4">{project.description}</p>
                   <div className="flex justify-between items-center">
                     <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
                       {project.category}
                     </span>
-                    <span className="text-sm text-gray-500">{project.date}</span>
+                    <span className="text-sm text-gray-900">{project.date}</span>
                   </div>
                 </div>
               </div>
@@ -97,8 +97,8 @@ export default function Projects() {
 
           {/* Call to Action */}
           <div className="mt-16 text-center">
-            <h2 className="text-2xl font-bold mb-4">Want to Get Involved?</h2>
-            <p className="text-gray-600 mb-8">
+            <h2 className="text-2xl font-bold mb-4 text-gray-900">Want to Get Involved?</h2>
+            <p className="text-gray-900 mb-8">
               Join us in making a difference in our community. There are many ways to participate in our projects and initiatives.
             </p>
             <Link
