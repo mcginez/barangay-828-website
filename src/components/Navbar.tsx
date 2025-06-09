@@ -5,6 +5,15 @@ import { useState } from 'react';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const navLinks = [
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About' },
+    { href: '/projects', label: 'Projects' },
+    { href: '/announcements', label: 'Announcements' },
+    { href: '/transparency', label: 'Transparency' },
+    { href: '/contact', label: 'Contact' }
+  ];
+
   return (
     <nav className="bg-blue-800 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -30,21 +39,15 @@ const Navbar = () => {
           {/* Desktop menu */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <Link href="/" className="hover:bg-blue-700 px-3 py-2 rounded-md">
-                Home
-              </Link>
-              <Link href="/about" className="hover:bg-blue-700 px-3 py-2 rounded-md">
-                About
-              </Link>
-              <Link href="/services" className="hover:bg-blue-700 px-3 py-2 rounded-md">
-                Services
-              </Link>
-              <Link href="/announcements" className="hover:bg-blue-700 px-3 py-2 rounded-md">
-                Announcements
-              </Link>
-              <Link href="/contact" className="hover:bg-blue-700 px-3 py-2 rounded-md">
-                Contact
-              </Link>
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="hover:bg-blue-700 px-3 py-2 rounded-md"
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
           </div>
 
@@ -73,21 +76,15 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link href="/" className="block hover:bg-blue-700 px-3 py-2 rounded-md">
-              Home
-            </Link>
-            <Link href="/about" className="block hover:bg-blue-700 px-3 py-2 rounded-md">
-              About
-            </Link>
-            <Link href="/services" className="block hover:bg-blue-700 px-3 py-2 rounded-md">
-              Services
-            </Link>
-            <Link href="/announcements" className="block hover:bg-blue-700 px-3 py-2 rounded-md">
-              Announcements
-            </Link>
-            <Link href="/contact" className="block hover:bg-blue-700 px-3 py-2 rounded-md">
-              Contact
-            </Link>
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="block hover:bg-blue-700 px-3 py-2 rounded-md"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       )}
