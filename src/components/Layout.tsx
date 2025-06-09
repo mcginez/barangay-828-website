@@ -1,4 +1,5 @@
 import Navbar from './Navbar';
+import ChatButton from './ChatButton';
 import { ReactNode } from 'react';
 
 interface LayoutProps {
@@ -20,6 +21,7 @@ const Layout = ({ children }: LayoutProps) => {
           </div>
         </div>
       </footer>
+      <ChatButton />
     </div>
   );
 };
