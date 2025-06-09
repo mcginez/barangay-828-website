@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 const Navbar = () => {
@@ -9,8 +10,20 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <Link href="/" className="flex-shrink-0">
-              <span className="text-xl font-bold">Barangay 828</span>
+            <Link href="/" className="flex items-center space-x-3">
+              <div className="relative w-10 h-10 sm:w-12 sm:h-12">
+                <Image
+                  src="/sk-logo.png"
+                  alt="SK Logo"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-xl font-bold">Barangay 828</span>
+                <span className="text-sm text-blue-200">Sangguniang Kabataan</span>
+              </div>
             </Link>
           </div>
           
