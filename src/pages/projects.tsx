@@ -1,5 +1,6 @@
 import Layout from '../components/Layout';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Projects() {
   const projects = [
@@ -99,12 +100,12 @@ export default function Projects() {
           <p className="text-gray-600 mb-8">
             Join us in making a difference in our community. There are many ways to participate in our projects and initiatives.
           </p>
-          <a
+          <Link
             href="/contact"
             className="inline-block bg-blue-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-blue-700 transition duration-300"
           >
             Contact Us to Volunteer
-          </a>
+          </Link>
         </div>
       </div>
     </Layout>
