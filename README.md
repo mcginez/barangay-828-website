@@ -2,6 +2,8 @@
 
 A modern, responsive website for the Sangguniang Kabataan of Barangay 828, Paco, Manila. Built with Next.js and Tailwind CSS, this website serves as the official digital platform for youth engagement and community information.
 
+https://barangay-828-website.vercel.app
+
 ## 🌟 Features
 
 - **Modern UI/UX Design**
