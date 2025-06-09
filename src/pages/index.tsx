@@ -1,5 +1,5 @@
 import Layout from '../components/Layout';
-
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Home() {
@@ -9,7 +9,18 @@ export default function Home() {
       <div className="relative bg-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <div className="flex justify-center mb-8">
+              <div className="relative w-32 h-32 sm:w-40 sm:h-40">
+                <Image
+                  src="/sk-logo.png"
+                  alt="SK Logo"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            </div>
+            <h1 className="text-2xl md:text-6xl font-bold mb-6">
               Welcome to Barangay 828 SK Council Official Website
             </h1>
             <p className="text-xl md:text-2xl mb-8">
@@ -27,21 +38,21 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-center mb-12">Quick Links</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-            <h3 className="text-xl font-semibold mb-4">Announcements</h3>
+            <h3 className="text-xl font-semibold mb-4 text-black">Announcements</h3>
             <p className="text-gray-600 mb-4">Stay updated with the latest news and events in our barangay.</p>
             <Link href="/announcements" className="text-blue-600 hover:text-blue-800">
               View Announcements →
             </Link>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-            <h3 className="text-xl font-semibold mb-4">Services</h3>
+            <h3 className="text-xl font-semibold mb-4 text-black">Services</h3>
             <p className="text-gray-600 mb-4">Access our various barangay services and requirements.</p>
             <Link href="/services" className="text-blue-600 hover:text-blue-800">
               View Services →
             </Link>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-            <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
+            <h3 className="text-xl font-semibold mb-4 text-black">Contact Us</h3>
             <p className="text-gray-600 mb-4">Get in touch with our barangay officials and staff.</p>
             <Link href="/contact" className="text-blue-600 hover:text-blue-800">
               Contact Us →
@@ -54,7 +65,7 @@ export default function Home() {
       <div className="bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold">About Our Barangay</h2>
+            <h2 className="text-3xl font-bold text-black">About Our Barangay</h2>
             <p className="mt-4 text-lg text-gray-600">
               Learn more about our community and its rich history
             </p>
@@ -70,8 +81,14 @@ export default function Home() {
               </Link>
             </div>
             <div className="relative h-64 md:h-96">
-              {/* Add your barangay image here */}
-              <div className="absolute inset-0 bg-gray-200 rounded-lg"></div>
+              <div className="absolute inset-0 bg-gray-200 rounded-lg overflow-hidden">
+                <Image
+                  src="/sk-logo.png"
+                  alt="Barangay 828"
+                  fill
+                  className="object-contain"
+                />
+              </div>
             </div>
           </div>
         </div>
