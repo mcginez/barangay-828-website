@@ -44,9 +44,7 @@ export default function Home() {
             <h1 className="text-2xl md:text-6xl font-bold mb-6">
               Welcome to Barangay 828 SK Council Official Website
             </h1>
-            <p className="text-xl md:text-2xl mb-8">
-              Serving our community with dedication and excellence
-            </p>
+          
             <Link href="/projects" className="bg-white text-blue-900 px-8 py-3 rounded-md font-semibold hover:bg-blue-100 transition duration-300">
               Our Projects
             </Link>

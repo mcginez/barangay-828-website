@@ -83,11 +83,11 @@ export default function Transparency() {
     <Layout>
       <div className="bg-gray-50 min-h-screen">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h1 className="text-4xl font-bold text-center mb-12">Transparency Portal</h1>
+          <h1 className="text-4xl font-bold text-center mb-12 text-black">Transparency Portal</h1>
 
           {/* Laws and Mandates Section */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8">SK Laws and Mandates</h2>
+            <h2 className="text-3xl font-bold mb-8 text-black">SK Laws and Mandates</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {laws.map((law, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
